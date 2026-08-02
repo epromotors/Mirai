@@ -29,7 +29,7 @@
     <meta property="twitter:title" content="Mirai Cyber AI | Deterministic Threat Intelligence & Evidence Engine" />
     <meta property="twitter:description" content="100% deterministic, mathematically verifiable threat intelligence with zero model hallucinations and Admiralty A1–F6 graded evidence ledgers." />
     <meta property="twitter:image" content="https://miraicyber.ai/og-image.png" />
-    <script type="module" crossorigin src="./js/main.js?v=6"></script>
+    <script type="module" crossorigin src="./js/main.js?v=7"></script>
     <link rel="stylesheet" href="./css/styles.css">
   <style>.bg-\[\#243257\] { background-color: #243257 !important; }
 .text-\[15px\] { font-size: 15px !important; }
@@ -38,7 +38,12 @@
 .text-\[12px\] { font-size: 12px !important; }
 .text-\[14px\] { font-size: 14px !important; }
 .text-\[16px\] { font-size: 16px !important; }
-@media (min-width: 640px) { .sm\:text-\[16px\] { font-size: 16px !important; } }</style>
+@media (min-width: 640px) { .sm\:text-\[16px\] { font-size: 16px !important; } }
+@media (min-width: 1024px) {
+  .lg\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; }
+  .lg\:col-span-3 { grid-column: span 3 / span 3 !important; }
+}
+</style>
 </head>
   <body>
     <div id="root"></div>

@@ -47,6 +47,71 @@
 .swiper-wrapper { align-items: stretch !important; }
 .swiper-slide { height: auto !important; display: flex !important; }
 .swiper-slide > div { height: 100% !important; }
+
+/* Custom navigation dropdown */
+.nav-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: -4px;
+}
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.nav-dropdown-trigger::after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  margin-top: -4px;
+  transition: transform 0.25s ease;
+  opacity: 0.8;
+}
+.nav-dropdown-wrapper:hover .nav-dropdown-trigger::after {
+  transform: rotate(-135deg);
+  margin-top: 2px;
+}
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 200px;
+  background-color: #1a2640;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.4), 0 10px 15px -6px rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 100;
+}
+.nav-dropdown-wrapper:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(2px);
+}
+.nav-dropdown-item {
+  display: block;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+.nav-dropdown-item:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
 </style>
 </head>
   <body>

@@ -43,6 +43,10 @@
   .lg\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; }
   .lg\:col-span-3 { grid-column: span 3 / span 3 !important; }
 }
+/* Equal-height capability cards across all screens */
+.swiper-wrapper { align-items: stretch !important; }
+.swiper-slide { height: auto !important; display: flex !important; }
+.swiper-slide > div { height: 100% !important; }
 </style>
 </head>
   <body>
